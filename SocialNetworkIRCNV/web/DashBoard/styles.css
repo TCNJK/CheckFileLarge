@@ -1,0 +1,36 @@
+ /* CSS to define the layout */
+ .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* Set the height to 95% of the viewport height */
+  /* Add max-height to prevent exceeding the viewport height */
+  gap: 10px;
+  background-color: #cdf1ff;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .chart{
+    width: 97%;
+  }
+}
+
+.chart {
+  width: 85%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart canvas {
+  max-width: 100%;
+  background-color: white;
+  border-radius: 1%;
+}
+
+/* Customize chart colors */

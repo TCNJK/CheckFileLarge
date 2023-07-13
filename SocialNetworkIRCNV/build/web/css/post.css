@@ -1,0 +1,135 @@
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.post{
+    background:#fff;
+    border-radius:10px;
+    padding-right: 0;
+    margin-right: 0;
+
+}
+
+.post .post-top{
+    display:flex;
+    align-items: center;
+    padding:10px;
+    padding-bottom: 0;
+}
+
+.post .post-top .dp{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+.post .post-top .dp > img{
+
+    cursor:pointer;
+}
+
+.post .post-top .post-info{
+    margin-left:10px;
+    font-weight: bold;
+}
+
+.post .post-top .post-info .name{
+    cursor:pointer;
+    font-size:20px;
+    margin-bottom: 0;
+}
+
+.post .post-top .post-info .time{
+    font-size:14px;
+    cursor:pointer;
+}
+
+.post .post-top i{
+    margin-left:auto;
+    cursor: pointer;
+}
+
+.post .post-top > input{
+    height:40px;
+    padding:5px 10px;
+    border-radius:25px;
+    outline:none;
+    border:none;
+    flex:1;
+    background:#eee;
+    margin-left:10px;
+}
+
+.post .post-content{
+    font-size:20px;
+    font-weight:normal;
+    padding: 10px;
+    max-height: 1000px;
+}
+
+.post .post-content > img{
+    margin:5px 0px;
+    max-height: 430px;
+}
+.post .post-content p{
+                margin-left: 20px;
+            }
+.post .counter{
+    padding: 10px 10%;
+    color: #00587c;
+}
+.post .counter{
+    box-shadow: 1px solid #ddd;
+    display:flex;
+    justify-content: space-between;
+    padding:0 10%;
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+.post .post-bottom{
+    box-shadow: 1px solid #ddd;
+    display:flex;
+    justify-content: space-between;
+    padding:0 10%;
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+
+.post .post-bottom .action{
+    padding:10px;
+    border-radius:10px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.post .post-bottom .action:hover{
+    background:#eee;
+}

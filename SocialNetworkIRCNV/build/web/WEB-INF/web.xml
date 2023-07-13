@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>Authorization</filter-name>
+        <filter-class>filter.Authorization</filter-class>
+    </filter>
+    <filter>
+        <filter-name>AutoLogin</filter-name>
+        <filter-class>filter.AutoLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AutoLogin</filter-name>
+        <url-pattern>/Authen/*</url-pattern>
+     
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Authorization</filter-name>
+        <url-pattern>/admin.jsp</url-pattern>
+        <url-pattern>/user.jsp</url-pattern>
+        <url-pattern>/vistor.jsp</url-pattern>
+    </filter-mapping>
+    <listener>
+        <description>ServletContextListener, HttpSessionListener</description>
+        <listener-class>listener.SessionListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>CreateNewPost</servlet-name>
+        <servlet-class>action.CreateNewPost</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateNewPost</servlet-name>
+        <url-pattern>/CreateNewPost</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
